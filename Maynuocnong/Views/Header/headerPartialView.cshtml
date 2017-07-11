@@ -1,0 +1,58 @@
+﻿@model Maynuocnong.Models.tblConfig
+<div id="banner">
+    <div id="content_Banner">
+        <div id="top_Banner">
+            <div id="left_TopBanner">
+                <nav>
+                    <ul>
+                        <li><a href="/" title="Trang chủ" rel="nofollow">Trang chủ</a></li>
+                        <li><a href="/tin-tuc" title="Tin tức" rel="nofollow">Tin tức</a></li>
+                        <li><a href="/tu-van-ky-thuat" title="Tư vấn kỹ thuật" rel="nofollow">Tư vấn kỹ thuật</a></li>
+                        <li><a href="/lien-he" title="liên hệ" rel="nofollow">Liên hệ</a></li>
+                        <li><a href="/tuyen-dung" title="liên hệ" rel="nofollow">Tuyển dụng</a></li>
+                        <li><a href="/he-thong-phan-phoi" title="Hệ thống phân phối" rel="nofollow">Hệ thống phân phối</a></li>
+                        <li><a href="/chinh-sach-dich-vu" title="Chính sách dịch vụ" rel="nofollow">Chính sách dịch vụ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="right_TopBanner">
+                <a href="" title="" class="language"></a>
+                <div class="search">
+                    <input type="text" placeholder="Nhập tìm kiếm ..." name="txtSearch" id="txtSearch" class="txtSearch" />
+                    <button type="submit" class="btnSearch" name="btnSearch" id="btnSearch"></button>
+                </div>
+            </div>
+        </div>
+        <div id="bottom_Banner">
+            <div id="logo">
+                <a href="/" title="Logo"><img src="@Model.Logo" alt="logo" /></a>
+            </div>
+            <div id="box_sp">
+                <div id="box_Order">
+                    <span class="sp1">Giỏ hàng của bạn</span>
+                    @if (Session["soluong"] != "" && Session["soluong"] != null)
+                    {
+                           <a href="/Gio-hang" title="Giỏ hàng"><span class="sp2">Có <span class="count">@Session["soluong"].ToString() sản phẩm</span>
+</span></a>
+                    }
+                    else
+                    {
+                           <span class="sp2">Có <span class="count">0</span> sản phẩm</span>
+                       
+                    }
+                 
+                </div>
+                <div id="box_Hotline">
+                    <span class="sp1">Hỗ trợ mua hàng</span>
+                    <span class="sp2">@Model.HotlineIN</span>
+                </div>
+            </div>
+
+            <div id="menu">
+                <ul class="ul1">
+                 @Html.Raw(ViewBag.result)
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

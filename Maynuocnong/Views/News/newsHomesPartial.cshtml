@@ -1,0 +1,30 @@
+﻿<div id="NewHomes">
+    <div class="Tear_NewsHomes">
+        <div class="nVar_NewsHomes">
+            <a href="/tin-tuc" title="Tin tức">Tin tức</a>
+        </div>
+        <div class="Content_Tear_NewsHomes">
+            <div class="Left_Tear_NewsHomes">
+               @Html.Raw(ViewBag.resultNews)
+            </div>
+            <div class="Right_Tear_NewsHomes">                
+                
+              @Html.Raw(ViewBag.resultListNews)
+            </div>
+        </div>
+    </div>
+    <div class="Tear_NewsHomes RightNewhomes">
+        <div class="nVar_NewsHomes">
+            <a href="/tu-van-ky-thuat" title="Tư vấn kỹ thuật">Tư vấn kỹ thuật</a>
+        </div>
+        <div class="Content_Tear_NewsHomes">
+            <div class="Left_Tear_NewsHomes">
+                
+                @Html.Raw(ViewBag.resultTuVan)
+            </div>
+            <div class="Right_Tear_NewsHomes">
+                @Html.Raw(ViewBag.resultListTuVan)
+            </div>
+        </div>
+    </div>
+</div>

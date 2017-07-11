@@ -1,0 +1,23 @@
+﻿
+@{
+     Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+
+@model Maynuocnong.Models.tblConfig
+
+@{Html.RenderAction("partialSlide", "Default");}
+<div class="Clear"></div>
+ <div id="main">
+    <div id="info_Homes">
+        <h1>@Model.Name</h1>
+        <div id="content_InfoHomes">
+             @Html.Raw(Model.Content)
+        </div>
+    </div>
+    @{Html.RenderAction("productListHomes", "product");}
+    <div class="Clear"></div>
+    @{Html.RenderAction("newsHomesPartial", "news");}
+    <div class="Clear"></div>
+
+</div>
+

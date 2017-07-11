@@ -1,0 +1,276 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+@model Maynuocnong.Models.tblProduct
+<div id="main">
+    <div class="nVar_Product">
+        <nav> @Html.Raw(ViewBag.nUrl)</nav>
+    </div>
+    <div id="Product">
+        <div id="ProductDetail">
+            <div id="Header_ProductDetail">
+                <div id="images_ProductDetail">
+
+                    <div id="Images_Detail">
+                        <a href="javascript:void(0)" title="@Model.Name">
+                            <img src="@Model.ImageLinkDetail" title="@Model.Name" alt="@Model.Name" />
+                        </a>
+                    </div>
+                    <div id="Images_Thumbs">
+                        @Html.Raw(ViewBag.chuoiimage)
+                    </div>
+                </div>
+                <div id="Info_ProductDetail">
+                    <div id="Info1">
+                        <h2 class="spanname">@Model.Name</h2>
+                        <span>Mã sản phẩm: <span>@Model.Code</span>| Lượt xem: <span>@Html.Raw(ViewBag.visit)</span> | Cập nhật: <span>@Model.DateCreate</span></span>
+                    </div>
+                    <div id="Info2">
+                        <ul>
+                            @if (ViewBag.manu != null && ViewBag.manu != "")
+                            {
+                                <li><span>Hãng sản xuất: @Html.Raw(ViewBag.manu)</span></li>
+                            }
+
+                            <li><span>Bảo hành : @Model.Warranty năm</span></li>
+                            @if (Model.Transport == true)
+                            {
+                                <li><span>Vận chuyển : Miễn phí </span></li>
+                            }
+                            else
+                            {
+                                <li><span>Vận chuyển : Liên hệ </span></li>
+                            }
+                            @if (Model.Status == true)
+                            {
+                                <li><span>Tình trạng: Còn hàng </span></li>
+                            }
+                            else
+                            {
+                                <li><span>Tình trạng: Hết hàng </span></li>
+                            }
+                        </ul>
+                    </div>
+
+                    <div id="Info3">
+                        <div id="LeftInfo3">
+                            <div class="box_Prices box_PriceSale">
+                                <span>Giá khuyến mại : </span>
+                                <small>
+                                    @Html.Raw(Model.PriceSaleString)
+                                </small>
+                                <span class="kmp"></span>
+                                <span>Giá niêm yết : <span class="gia">@string.Format("{0:#,#}", Model.Price) đ</span></span>
+                                <span class="Tietkiem">(Tiết kiệm : @ViewBag.tietkiem đ)</span>
+                            </div>
+
+
+
+                        </div>
+                        <div id="RightInfo3">
+                            <a href="" title="" class="Huongdan"><span></span> Hướng dẫn đặt hàng</a>
+                            <a href="" title="" class="Doitra"><span></span> Chính sách đổi trả hàng</a>
+                            <a href="" title="" class="Baohanh"><span></span> Chính sách bảo hành</a>
+                        </div>
+                        <div id="Box_Buy">
+                            <div id="Left_Boxbuy">
+                                <button type="submit" name="btnOrder" id="btnOrder" rel="miendatwebPopup" href="#popup_content" onclick="CreateOrder(@Model.id)">Đặt ngay</button>
+                            </div>
+                            <div id="Right_Boxbuy">
+                                <a href="#" title="Hướng dẫn đặt hàng">Hướng dẫn đặt hàng</a>
+                            </div>
+                           
+
+
+                        </div>
+                    </div>
+
+                    @if (Model.Sale != null && Model.Sale != "")
+                    {
+                        <div id="SaleProduct">
+                            <div id="Content_SaleProduct">
+                                <span class="icon_SaleProduct">Khuyến mãi</span>
+                                @Model.Sale
+                            </div>
+                        </div>
+                    }
+
+                    <div id="Info5">@Html.Raw(ViewBag.chuoiimages)</div>
+                </div>
+            </div>@{Html.RenderAction("partialTransport", "Default");}
+
+            <div id="Content_ProductDetail">
+                <div class="Nvar_ProductDetail">
+                    <a href="#Thongtin" class="set" title="">Thông tin sản phấm</a>
+
+                    <a href="#Gioithieu" title="">Giới thiệu sản phẩm</a>
+                    <a href="#Comment" title="">Nhận xét khách hàng</a>
+                    @*@if (ViewBag.Baohanh != null && ViewBag.Baohanh != "")
+                    {
+                        <a href="/Dia-chi-bao-hanh/@ViewBag.Baohanh " title="Địa chỉ bảo hành">Địa chỉ bảo hành</a>
+                    }*@
+
+
+                </div>
+                <div id="Thongtin">
+                    <table>
+                        <tr>
+                            <td>Tên sản phẩm :</td>
+                            <td>@Model.Name</td>
+                        </tr>
+                        <tr>
+                            <td>Mã sản phẩm :</td>
+                            <td>@Model.Code</td>
+                        </tr>
+                        @if (ViewBag.manu != null && ViewBag.menu != "")
+                        {
+                            <tr>
+                                <td>Thương hiệu</td>
+                                <td>@ViewBag.manu </td>
+                            </tr>
+                        }
+                    
+                        <tr>
+                            <td>Bảo hành</td>
+                            <td>@Model.Warranty năm</td>
+                        </tr>
+
+                      @if(ViewBag.ong!=null && ViewBag.ong!="")
+                      {
+                           <tr>
+
+                                <td>Công nghệ ống:</td>
+                                <td>@ViewBag.ong</td>
+                            </tr>
+                      }
+                        @if (ViewBag.bbo != null && ViewBag.bbo != "")
+                        {
+                            <tr>
+
+                                <td>Bình bảo ôn:</td>
+                                <td>@ViewBag.bbo</td>
+                            </tr>
+                        }
+
+                        @if (Model.Size != null && Model.Size != "")
+                        {
+                            <tr>
+
+                                <td>Kích thước:</td>
+                                <td>@Model.Size (mm)</td>
+                            </tr>
+                        }
+
+                        @Html.Raw(ViewBag.chuoi)
+                        @if (Model.Access!=null && Model.Access!="")
+                        {
+                            <tr>
+
+                                <td>Phụ kiện đi kèm (A/D tại Hà Nội):</td>
+                                <td>@Model.Access</td>
+                            </tr>
+                        }
+                    </table>
+                    @Html.Raw(@Model.Parameter)
+                </div>
+                <div id="Gioithieu">
+                    @Html.Raw(Model.Info)
+                    @Html.Raw(Model.Content)
+                    @if(ViewBag.video!=null && ViewBag.video!="")
+                    {
+                        <h3>Video giới thiệu @Model.Name</h3>
+                        @Html.Raw(ViewBag.video)
+                    }
+                </div>
+
+
+                <div class="buynow-button">
+                    <div class="buynow-button-inner">
+                        <h3 class="name-product">@Model.Name</h3>
+                        <div class="thumb"><img src="@Model.ImageLinkThumb" alt="@Model.Name" title="@Model.Name"></div>
+
+                        <div class="price">
+                            <span>Giá bán: <span class="new-price">@string.Format("{0:#,#}", Model.PriceSale) vnđ</span></span><br>
+                            <span>Giá thị trường: <span class="old-price">@string.Format("{0:#,#}", Model.Price) vnđ</span></span><br>
+                        </div>
+
+
+
+                        <div class="button">
+                            <input type="button" value="Đặt hàng" class="buy-now" id="open_popup" name="open_popup" rel="miendatwebPopup" href="#popup_content" onclick="CreateOrder(@Model.id)">
+                        </div>
+
+                        <div style="clear: both"></div>
+
+                    </div><!--End .buynow-button-->
+                    
+
+                </div>
+                <div class="Clear"></div>
+                <div class="Tag"> <span>Tags</span> @Html.Raw(ViewBag.chuoitag)</div>
+                <div class="Line1"></div>
+                <div id="Comment">
+                    <div class="nVar_2">
+                        <span>Nhận xét đánh giá</span>
+                    </div>
+                    <div id="Sluion">
+
+                        <div class="Mxh" style="float: left; width: 100%; margin-top:5px">
+                            <div style="float:left" class="fb-like" data-send="true" data-layout="button_count" data-width="60"
+                                 data-show-faces="true">
+                            </div>
+                            <div class="fb-send" style="float:left; margin:0px 5px" data-href="@Request.Url.ToString()"></div>
+                            <div id="g" style="float: left; margin: 0px 0px;width: auto">
+                                <g:plusone size="medium"></g:plusone>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ConmentFacebook">
+                        <div class="fb-comments" data-href="@Request.Url.ToString()" data-num-posts="20" style="width:100%; float:left; margin:0px" width="100%"></div>
+                    </div>
+                </div>
+                @*@if (Request.Browser.IsMobileDevice == false)
+                {
+                    if (ViewBag.chuoilq1 != null && ViewBag.chuoilq1 != "")
+                    {
+                        <div class="Nvar_ProductDetail">
+                            <a href="#" title="cùng danh mục cùng dung tích" class="set">Sản phẩm cùng @Html.Raw(ViewBag.capa) của @ViewBag.manu</a>
+
+                        </div>
+                        <div class="Content_Product">
+                            @Html.Raw(ViewBag.chuoilq1)
+
+                        </div>
+                    }
+                    if (ViewBag.chuoilq != null && ViewBag.chuoilq != "")
+                    {
+                        <div class="Nvar_ProductDetail">
+                            <a href="#" title="cùng dung tích của hãng khác" class="set">Sản phẩm cùng @Html.Raw(ViewBag.capa) của hãng khác</a>
+
+                        </div>
+                        <div class="Content_Product">
+                            @Html.Raw(ViewBag.chuoilq)
+
+                        </div>
+                    }
+                    if (ViewBag.chuoilq2 != null && ViewBag.chuoilq2 != "")
+                    {
+                        <div class="Nvar_ProductDetail">
+                            <a href="#" title="cùng danh mục" class="set">Sản phẩm cùng danh mục @ViewBag.tendanhmuc</a>
+
+                        </div>
+                        <div class="Content_Product">
+                            @Html.Raw(ViewBag.chuoilq2)
+
+                        </div>
+                    }
+                }*@
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="Clear"></div>
+</div>

@@ -1,0 +1,255 @@
+﻿@model Maynuocnong.Models.tblConfig
+<div id="Footer">
+    <div id="Info_Footer">
+        <div id="Logo">
+            <img src="@Model.Logo" alt="logo" />
+        </div>
+        <div id="ListAgency">
+            <div class="Agency_Tear">
+                <span class="ts">Trụ sở miền bắc</span>
+                <span class="dc">Địa chỉ: @Model.Address</span>
+                <span class="dt">Điện thoại : @Model.MobileIN   </span>
+                <span class="dt">Hotline: <span>@Model.HotlineIN</span></span>
+            </div>
+             @Html.Raw(ViewBag.result)
+            
+        </div>
+        <div class="Clear"></div>
+    </div>
+    <div id="Register">
+        <div id="Content_Register">
+            <div id="Left_Content_Register">
+                <span>Đăng ký nhận bản tin</span>
+            </div>
+            <div id="Center_Content_Register">
+                <div id="Box_Register">
+                    <input type="email" name="txtRes" id="txtRes" class="txtRes" /><button type="submit" class="btnRes" name="btnRes" id="btnRes"></button>
+                </div>
+
+            </div>
+            <div id="Right_Content_Register">
+                <a href="" title="" class="Google"></a>
+                <a href="" title="" class="Face"></a>
+                <a href="" title="" class="Maps"></a>
+            </div>
+            <div class="Clear"></div>
+        </div>
+    </div>
+    <div id="Intro">
+        <div id="IntroContent">
+            <div class="Tear_Intro">
+                <span>Thông tin công ty</span>
+                <a href="/Gioi-thieu" title="Giới thiệu" rel="nofollow">Giới thiệu</a>
+                <a href="/Lien-he" title="Liên hệ" rel="nofollow">Liên hệ</a>
+                <a href="/0/Tin-tuc" title="Tin tức" rel="nofollow">Tin tức</a>
+                <a href="/He-thong-phan-phoi" title="Hệ thống phân phối" rel="nofollow">Hệ thống phân phối</a>
+                <a href="/Ban-do" title="Bản đồ">Bản đồ</a>
+
+            </div>
+            <div class="Tear_Intro">
+                <span>Chinh sách dịch vụ</span>
+                @Html.Raw(ViewBag.chinhsach)
+            </div>
+            <div class="Tear_Intro">
+                <span>Sản phẩm tiêu biểu</span>
+                @Html.Raw(ViewBag.chuoi)
+            </div>
+            <div class="Tear_Intro">
+                <span>Báo giá sản phẩm</span>
+                @Html.Raw(ViewBag.chuoibaogia)
+            </div>
+            <div class="Clear"></div>
+        </div>
+    </div>
+
+    <div id="Bocongthuong">
+        <a href="#" title="Logo bộ công thương"> 
+            <img src="~/Content/Admin/Icon/logo_cap_phep.png" /></a>
+    </div>
+    <div id="Linkout" style="opacity:0.2">
+        @Html.Raw(ViewBag.Url)
+        <h3> <a href="http://thayloilocnuoc.com" title="thay lõi lọc nước Kangaroo tại nhà">Thay lõi lọc nước Kangaroo tại nhà</a></h3>, <h3><a href="http://binhnonglanh.top" title="Bình nóng lạnh">Bình nóng lạnh</a></h3>
+    </div>
+    <div id="CoppyRight">
+        <span> 2016 <span>SEABIG VIỆT NAM</span>. All Rights Reserved.</span>
+    </div>
+</div>
+<div id="Support_Footer">
+    <div id="Content_SupportFooter">
+        <div id="Support">
+            <span class="thacmac">Bạn thắc mắc trong quá trình mua hàng?</span>    <div class="Tear_Sp"><div class="Left_Tear_Sp"> </div><div class="Right_Tear_Sp"><span class="sp1"> Hỗ trợ 01   </span> <span class="sp2">  @Model.HotlineIN     </span></div> </div><div class="Tear_Sp"><div class="Left_Tear_Sp"> </div><div class="Right_Tear_Sp"><span class="sp1"> Hỗ trợ 02   </span> <span class="sp2">  @Model.HotlineOUT      </span></div> </div>
+        </div>
+        <div id="Call" data-toggle="modal" data-target="#myModal">
+            <span>YÊU CẦU CHÚNG TÔI</span>
+            <small>Gọi lại cho bạn</small>
+            <div class="icon"></div>
+        </div>
+    </div>
+</div>
+ <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        @using (Html.BeginForm("CommandCall", "Footer", FormMethod.Post))
+        {
+        <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Yêu cầu gọi điện</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="input-content">
+
+                        <img src="~/Content/Display/ICon/calendar.png" alt="Lịch hẹn" />
+                        <div class="text-hello"> Xin chào,</div>
+
+                        <p class="conten-sub">Vui lòng nhập thông tin để chúng tôi gọi điện trực tiếp tư vấn cho bạn sau 2-5 phút</p>
+                        <input class="request_phone form-control" type="text" name="request_phone" id="request_phone" value="" placeholder="Số điện thoại liên hệ lại">
+                        <div class="phone_error alert-danger"></div>
+                        <textarea class="request_content form-control" name="request_content" id="request_content" placeholder="Nội dung thắc mắc?"></textarea>
+
+                        <!-- dieupt09112016 BEGIN -->
+                        <div>
+                            <p class="conten-sub">Bạn Ở Khu Vực Nào?</p>
+
+                            <input type="radio" id="loc_req_1" name="request_location" value="hn" class="css-checkbox-x2 request_location" checked="checked">
+                            <label for="loc_req_1" class="css-label-x2">HN</label>
+
+                            <input type="radio" id="loc_req_2" name="request_location" value="hcm" class="css-checkbox-x2 request_location">
+                            <label for="loc_req_2" class="css-label-x2">HCM</label>
+                            <input type="radio" id="loc_req_3" name="request_location" value="tk" class="css-checkbox-x2 request_location">
+                            <label for="loc_req_3" class="css-label-x2">Tỉnh khác</label>
+                        </div>
+                        <!-- dieupt09112016 END -->
+
+                        <div class="content_error alert-danger"><div class="loading"></div></div>
+                        <div class="submit-content error_send" style="display:none;text-align: center;">
+                        </div>
+                        <div class="submit-content js_submit"><span class="send-go btn" onclick="javascript:return Senmail()">Gửi Đi</span><div class="go-hotline"> Gọi hotline <span>@Model.HotlineIN</span> (24/7)</div></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="result" style="margin:5px 10px; color:#238f0e; font-weight:bold; display:inline-block; padding:5px;  float:left"></span>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@if(Request.Browser.IsMobileDevice==false)
+{
+    @Html.Raw(Model.CodeChat)    <script>
+        try {
+            var Tat_quangcao = localStorage.getItem("Tat_quangcao");
+            if (Tat_quangcao != null) {
+                if ((new Date).getDate() == new Date(parseInt(localStorage.getItem("Tat_quangcao"))).getDate()) {
+                    open_motog = false;
+                }
+            }
+        } catch (e) { console.log(e) }
+
+        function Tatquangcao(obj) {
+            $(obj).parent().remove();
+            try {
+
+                $('#Top_Banner').css({ 'height': '32px' });
+                $('#Content_Top_Banner').css({ 'position': 'relative', 'display': 'block' });
+                $('#adw').html();
+
+                localStorage.setItem("Tat_quangcao", (new Date).getTime())
+            } catch (e) { console.log(e); }
+        }
+    </script>
+    <style>
+        #adwfooter {
+            width: 100%;
+            height: auto;
+            float: left;
+            margin: 0px;
+            border-bottom: 1px solid #dddddd;
+            position: fixed;
+            bottom: 0px;
+        }
+
+        #Banner_footer {
+            bottom: 0px;
+            z-index: 10;
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+
+        #Content_Banner_Footer {
+            width: 1200px;
+            height: auto;
+            margin: 0px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+            #Content_Banner_Footer span {
+                font-size: 20px;
+                text-align: center;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background-color: #333;
+                color: #FFF;
+                cursor: pointer;
+                z-index: 99;
+                line-height: 20px;
+            }
+
+            #Content_Banner_Footer a {
+                float: left;
+                margin: 0px;
+                display: block;
+            }
+    </style>
+    if (ViewBag.Chuoiimg != null && ViewBag.Chuoiimg != "")
+    {
+        <div id="adwfooter">
+            <div id="Banner_footer">
+                <div id="Content_Banner_Footer">
+                    <span onclick="Tatquangcao(this)">×</span>
+
+                    @Html.Raw(ViewBag.Chuoiimg)
+                </div>
+            </div>
+        </div>
+    }
+}
+<script>
+    function Senmail() {
+        var content = $("#request_content").val();
+        var phone = $("#request_phone").val();
+        var kiemtra = 0;
+        if (content.length < 10) {
+            kiemtra = 1;
+            alert("Bạn vui lòng nhập nội dung yêu cầu !");
+            $(".result").html("Bạn vui lòng nhập nội dung yêu cầu");
+        }
+        if (phone.length < 10) {
+            kiemtra = 1;
+            alert("Bạn vui lòng nhập số điện thoại !");
+            $(".result").html("Bạn vui lòng nhập số điện thoại của bạn !");
+        }
+        if (kiemtra != 1) {
+            $(".loading").html("<img src=\"/Content/Display/ICon/InternetSlowdown_Day.gif\" style=\"width:70px; margin:5px auto; display:block;clear:both\" /> ");
+
+            $.post("/footer/CommandCall", { "phone": phone, "content": content },
+                    function (data) {
+
+                        $(".result").html(data.result);
+                        $(".loading").html("");
+                        $("#request_content").val() = "";
+                        $("#request_phone").val() = "";
+                    });
+        }
+
+        return false;
+    }
+
+</script>

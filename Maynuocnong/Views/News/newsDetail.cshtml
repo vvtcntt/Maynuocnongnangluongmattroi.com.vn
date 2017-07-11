@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+
+<div id="main">
+    <div class="nVar_Product">
+        <nav>@Html.Raw(ViewBag.nUrl)</nav>
+    </div>
+
+
+    <div id="News">
+        <div id="LeftNews">
+            @{Html.RenderAction("leftNewsPartial", "News");}
+            </div>
+            <div id="RightNews">
+                <div class="nVar_NewsDetail">
+                    <h1>@Model.Name</h1>
+                    <div class="Clear"></div>
+                    <div class="toolbar"><span class="Cate"><span></span>@ViewBag.NameMenu</span><span class="Cata"><span></span>Thời gian gửi: @Model.DateCreate</span><span class="Account"><span></span>@ViewBag.Username</span> </div>
+                </div>
+                <div class="NewsDetail">
+                    <div class="Des_Detail">
+                        @Model.Description
+
+                    </div>
+                    @Html.Raw(ViewBag.chuoinew)
+                    <div class="Content_Detail">
+                        @Html.Raw(Model.Content)
+                    </div>
+                    <div class="Tag"> <span>Tags</span>@Html.Raw(ViewBag.chuoitag)</div>
+                </div>
+                <div id="Comment">
+                    <div class="nVar_2">
+                        <span>Nhận xét đánh giá</span>
+                    </div>
+                    <div id="Sluion">
+
+                        <div class="Mxh" style="float: left; width: 100%; margin-top:5px">
+                            <div style="float:left" class="fb-like" data-send="true" data-layout="button_count" data-width="60"
+                                 data-show-faces="true">
+                            </div>
+                            <div class="fb-send" style="float:left; margin:0px 5px" data-href="@Request.Url.ToString()"></div>
+                            <div id="g" style="float: left; margin: 0px 0px;width: auto">
+                                <g:plusone size="medium"></g:plusone>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ConmentFacebook">
+                        <div class="fb-comments" data-href="@Request.Url.ToString()" data-num-posts="20" style="width:100%; float:left; margin:0px" width="100%"></div>
+                    </div>
+                </div>
+                <div class="Tintuclienquan">
+                    <span class="Name">Tin tức liên quan</span>
+                    <div class="Content_Tintuclienquan">
+                        <ul>
+                            @Html.Raw(ViewBag.chuoinewnews)
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    <div class="Clear"></div>
+</div>
