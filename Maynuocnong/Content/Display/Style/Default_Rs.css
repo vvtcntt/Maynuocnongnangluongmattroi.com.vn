@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 768px) {
+	#content_Banner{width:100%}
+	#content_Banner #top_Banner #left_TopBanner{width:100%; margin:0px}
+	#right_TopBanner{display:none}
+	#left_TopBanner nav ul li:first-child{margin-left:10px}
+	#bottom_Banner #logo{width:40%}
+	.box_sp{width:60%; height:auto; float:left}
+	#menu{width:100%; height:auto; float:left; margin:0px; display:none}
+	#bottom_Banner #logo a img{margin-top:5px; max-width:120px; margin-left:5px}
+	#bottom_Banner{height:auto}
+#slide #contentSlide{width:100%}
+#slide{height:320px}
+ #main{width:97%; padding:5px}
+ .slide_Product{width:100%; float:left; margin:0px}
+ .video_Product{display:none}
+ .nvar_Product{display:none}
+ .tear_1{width:23.5%; height:280px}
+ .tear_1 .img{ height:120px}
+ .tear_1 .box_price{width:100%; text-align:center}
+ .tear_1 .box_logo{ display:none}
+ .tear_1 .info span{margin:2px 5px}
+ .Content_Tear_NewsHomes .Left_Tear_NewsHomes{width:100%}
+ .Content_Tear_NewsHomes .Right_Tear_NewsHomes{width:100%; margin:5px 0px}
+ 	#Info_Footer{width:100%}
+	#Info_Footer #Logo{width:100%; padding-bottom:15px}
+	#Info_Footer #Logo img{margin:7px auto; display:block; float:none}
+	#Info_Footer #ListAgency{width:100%; padding:10px 0px}
+	#Info_Footer #ListAgency .Agency_Tear{width:30%}
+	#Content_Register{width:100%}
+	#Right_Content_Register{display:none}
+	#Intro #IntroContent{ width:100%}
+	#Bocongthuong{padding:0px}
+    #Linkout{width:100%}
+	#Support_Footer{display:none}
+}
+@media screen and (max-width: 480px) {
+#content_Banner #top_Banner #left_TopBanner{ display:none}
+#right_TopBanner{width:100%; margin:0px; display:block}
+#bottom_Banner #logo{width:100%}
+.box_sp{width:100%}
+#box_Order{width:49%; float:left; margin:0px; padding:0px 0px}
+#box_Hotline{width:50%; float:left; margin:0px; padding:0px 0px}
+#bottom_Banner #logo a img { float:none; display:block; margin:5px auto; display:block}
+#slide{ height:150px}
+#info_Homes #content_InfoHomes{display:none}
+#info_Homes h1{ display:none}
+.tear_Product h2{font-size:14px}
+.tear_1{width:47%}
+#product_Homes{margin:2px 0px}
+#NewHomes{display:none}
+#Info_Footer #ListAgency .Agency_Tear{width:98%}
+	#Content_Register #Left_Content_Register{width:100%}
+	#Content_Register #Left_Content_Register span{text-align:center}
+	#Center_Content_Register{width:100%}
+	#Center_Content_Register #Box_Register{width:100%; padding:0px 0px; margin:0px}
+	#Center_Content_Register #Box_Register .txtRes{width:88%}
+	#Center_Content_Register #Box_Register .btnRes{width:12%}
+	footer{width:100%; overflow:hidden}
+	#Intro{display:none}
+}

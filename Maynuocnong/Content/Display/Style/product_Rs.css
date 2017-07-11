@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+@media screen and (max-width: 768px) 
+{
+ 
+#ProductDetail{ width:97%; padding:10px 0px; float:none; margin:5px auto; border:none}
+div#Header_ProductDetail{ width:100%; border:none}
+#ProductDetail #images_ProductDetail{ width:100%; border:none}
+.mousetrap{ display:none !important}
+#wrap{ width:100% !important}
+#Images_Detail a img{ margin:5px 10px}
+#Images_Detail{ border:none}
+#Info_ProductDetail{ width:100%; border:none; margin:0px}
+#Product #ListProduct{ width:100%; height:auto; float:left; margin:10px 0px}
+
+#Left_ListProduct{ width:100%}
+.Tear_mn ul li.li1{ width:auto}
+.mn1{ display:none}
+#Right_ListProduct{ width:100%}
+#SlideInPoduct{ height:auto}
+#SlideInPoduct img{ height:auto}
+#Right_ListProduct .tear_1{width:23.5%}
+#Transport .Tear_Tran{width:50%}#Transport .Tear_Tran:after{ background:none; width:0; height:auto}
+	#Transport{border:none}
+ }
+@media screen and (max-width: 480px) 
+{#Info3 #RightInfo3 a{width:100%}
+ 
+	.nVar_Name h1{ text-align:center}
+	div#Left_ListProduct{ display:none}
+	#Images_Thumbs{ display:none}
+	#Info2 li{ width:92%}
+	#Info3 #LeftInfo3{ width:100%}
+ 	#Info3 #RightInfo3{ width:100%; margin:7px 0px}
+	#Info4{ width:100%}
+	#Product #ListProduct{ display:none}
+	#Nvar_ProductDetail a{ display:none}
+	#Nvar_ProductDetail a.set{ display:inline-block}
+	#Content_ProductDetail #Thongtin h3{ text-align:center; text-transform:none}
+	#Images_Detail{ height:auto}
+	#wrap{ height:auto}
+	#Images_Detail{ margin:5px 0px 10px 0px}
+    table.Ferroli tr td{width:100%}
+    .nVar_Product{display:none}
+	#spcungia{display:none}
+	#Right_ListProduct .tear_1{width:47%}
+	.slide_ProductList{height:160px}
+	#Transport .Tear_Tran{width:100%}
+
+ }

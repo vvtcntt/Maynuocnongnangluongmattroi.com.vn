@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 768px) 
+{
+	#LeftNews{ display:none}
+	#RightNews{ width:98%; height:auto; margin:5px auto; float:none}
+	}
+@media screen and (max-width: 480px) 
+{}

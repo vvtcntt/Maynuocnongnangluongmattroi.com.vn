@@ -1,0 +1,117 @@
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel{
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+	
+.owl-carousel .owl-item{
+	float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing { 
+    cursor:url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+
+.slider-category{
+margin:5px 0;
+padding:7px 0 0 !important;
+}
+.trans-area .bx-wrapper .bx-prev {
+background: url(../Icon/arrow-slide-left.png) 0 0 no-repeat;
+}
+.trans-area .bx-wrapper .bx-next {
+background: url(../Icon/arrow-slide-right.png) 0 0 no-repeat;
+}
+.category-slider-content .bx-wrapper .bx-prev {
+background: url(../Icon/left.jpg) -4px -5px no-repeat;
+}
+.category-slider-content .bx-wrapper .bx-next {
+background: url(../Icon/right.jpg) -3px -5px no-repeat;
+}
+.category-slider-content .bx-wrapper .bx-viewport {
+box-shadow: 0px 0px 0px;
+-webkit-box-shadow: 0px 0px 0px;
+-moz-box-shadow: 0px 0px 0px;
+border: 1px solid #eee;
+}
+.category-slider-content .bx-wrapper .bx-prev {
+left:0;
+}
+.category-slider-content .bx-wrapper .bx-next {
+right:0
+}
+.category-slider-content {
+position: relative;
+padding:0 10px
+}
+span.slider-category-title {
+position: absolute;
+z-index: 99999;
+top:5px;
+left:34px;
+background: #fff;
+padding: 6px 0 6px 20px;
+font-weight: bold;
+cursor: pointer;
+color: red;
+font-size: 15px;
+text-transform: uppercase;
+min-width:110px;
+}
