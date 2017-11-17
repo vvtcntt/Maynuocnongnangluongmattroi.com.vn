@@ -65,9 +65,9 @@ color: #4c4c4c;
 z-index:99999999;
 white-space:nowrap;
 cursor: pointer;}
-#box_Hotline{width:140px; float:right; margin:15px 0px 0px 0px; height:45px; background:url(../Icon/hotline-icon.png) no-repeat left center scroll transparent }
-#box_Hotline .sp1{ color:#908d8d; font-size:12px; display:block; margin:5px 5px 3px 5px; padding-left:35px}
-#box_Hotline .sp2{ color:#f2192d; font-size:15px; display:block; margin: 0px 5px; padding-left:35px; font-weight:bold}
+.box_Hotline{width:auto; float:right; margin:15px 0px 0px 0px; height:45px; background:url(../Icon/hotline-icon.png) no-repeat left center scroll transparent }
+.box_Hotline .sp1{ color:#908d8d; font-size:12px; display:block; margin:5px 5px 3px 5px; padding-left:35px}
+.box_Hotline .sp2{ color:#f2192d; font-size:15px; display:block; margin: 0px 5px; padding-left:35px; font-weight:bold}
 .box_sp{width:80%; height:auto; float:left; margin:0px}
 #box_Order{width:180px; float:right; margin:15px 0px 0px 0px; height:45px; background:url(../Icon/icon-cart.png) no-repeat left center scroll transparent; margin-left:10px }
 #box_Order .sp1{ color:#908d8d; font-size:12px; display:block; margin:5px 5px 3px 5px; padding-left:35px}
@@ -329,4 +329,77 @@ footer{width:100%; height:auto; float:left; margin:0px; padding:15px 0px 0px 0px
 #Linkout h3{ margin:0px; font-weight:normal; display:inline-block}
     #Linkout h3 a {
         color: #f6f6f6;
+    }
+.timeWorks {
+    width: auto;
+    height: auto;
+    float: left;
+    margin: 0px;
+    color: #333;
+    border: 1px dashed #a7a7a7;
+    position: relative;
+    border-radius: 5px;
+    padding: 7px;
+    background: url(../icon/clock.gif) no-repeat 7px center scroll #fffef1;
+    padding-left: 85px;
+}
+
+    .timeWorks .tm1 {
+        font-size: 12px;
+        margin: 0px 5px;
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+        .timeWorks .tm1 strong {
+            color: #ff5501;
+            font-size: 22px;
+            font-weight: bold
+        }
+
+    .timeWorks .tm2 {
+        font-size: 14px;
+        margin: 0px 5px;
+        display: block;
+        font-style: italic
+    }
+
+    .timeWorks .tm3 {
+        font-size: 14px;
+        margin: 0px 5px;
+        display: block;
+        color: #ff5501
+    }
+
+        .timeWorks .tm3 strong {
+            color: #0080ec
+        }
+
+.hotlineSwitchBoard {
+    width: auto;
+    height: auto;
+    float: left;
+    margin: 0px;
+    background: url(../icon/hotline-icons.png) no-repeat right center scroll transparent;
+    padding-right: 55px
+}
+
+    .hotlineSwitchBoard .nameHotline {
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 5px 5px 0px 5px;
+        text-align: right;
+        display: block;
+        text-transform: uppercase
+    }
+
+    .hotlineSwitchBoard .hotlines {
+        font-size: 23px;
+        color: #F00;
+        font-weight: bold;
+        margin: 1px 5px;
+        display: block;
+        text-align: left;
+        font-family: Arial, Helvetica, sans-serif
     }

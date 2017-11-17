@@ -21,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1406,6 +1407,7 @@
     <Content Include="Content\Display\Fonts\UTM-Swiss-CondensedBold.ttf" />
     <Content Include="Content\Display\Icon\Bang phan cong cong viec - Nhung- Thang 11.xlsx" />
     <Content Include="Content\Display\Icon\Theo dõi tiến độ công việc tháng 11-2016 - Trương Thị Thúy.xlsx" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\Maynuocnongnangluongmattroi.com.vn.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\disable-copyright.js" />

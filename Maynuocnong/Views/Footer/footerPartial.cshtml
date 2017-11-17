@@ -3,13 +3,20 @@
     <div id="Info_Footer">
         <div id="Logo">
             <img src="@Model.Logo" alt="logo" />
+            <div class="timeWorks" >
+                <span class="tm1">Thời gian làm việc : <strong>8H00 - 21H15</strong> </span>
+                <span class="tm2">Làm việc tất cả các ngày trong tuần</span>
+                <span class="tm3">
+                    Khách hàng mua hàng từ <strong>18H00 - 21H15</strong> cần đặt lịch trước qua số hotline : <strong>1900 63 66 95</strong>
+                </span>
+            </div>
         </div>
         <div id="ListAgency">
             <div class="Agency_Tear">
                 <span class="ts">Trụ sở miền bắc</span>
                 <span class="dc">Địa chỉ: @Model.Address</span>
                 <span class="dt">Điện thoại : @Model.MobileIN   </span>
-                <span class="dt">Hotline: <span>@Model.HotlineIN</span></span>
+                <span class="dt">Hotline: <span>@Model.HotlineIN - @Model.HotlineOUT</span></span>
             </div>
              @Html.Raw(ViewBag.result)
             
