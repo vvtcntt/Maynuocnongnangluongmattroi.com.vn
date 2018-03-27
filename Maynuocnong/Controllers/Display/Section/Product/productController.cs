@@ -483,7 +483,7 @@ namespace Maynuocnong.Controllers.Display.Section.Product
                     List<string> Mang = new List<string>();
                     Mang = Arrayid(idCate);
                     Mang.Add(idCate.ToString());
-                    var listProduct = db.tblProducts.Where(p => p.Active == true && Mang.Contains(p.idCate.ToString())).OrderBy(p => p.Ord).Take(10).ToList();
+                    var listProduct = db.tblProducts.Where(p => p.Active == true && Mang.Contains(p.idCate.ToString())).OrderBy(p => p.Ord).ToList();
                     if (Mangloc.Count > 0)
                     {
                         if (Mangidp.Count > 0)
@@ -600,7 +600,7 @@ namespace Maynuocnong.Controllers.Display.Section.Product
                 List<string> Mang = new List<string>();
                 Mang = Arrayid(idCate);
                 Mang.Add(idCate.ToString());
-                var listProduct = db.tblProducts.Where(p => p.Active == true && Mang.Contains(p.idCate.ToString())).OrderBy(p => p.Ord).Take(10).ToList();
+                var listProduct = db.tblProducts.Where(p => p.Active == true && Mang.Contains(p.idCate.ToString())).OrderBy(p => p.Ord).ToList();
                 if (Mangloc.Count > 0)
                 {
                     if (Mangidp.Count > 0)
