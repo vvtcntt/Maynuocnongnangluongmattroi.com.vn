@@ -111,5 +111,9 @@ namespace Maynuocnong.Controllers.Display.Footer
             return Json(new { result = result });
 
         }
+        public PartialViewResult callPartial()
+        {
+            return PartialView(db.tblConfigs.First());
+        }
     }
 }

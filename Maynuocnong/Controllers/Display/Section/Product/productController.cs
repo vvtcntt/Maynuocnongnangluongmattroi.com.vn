@@ -315,7 +315,7 @@ namespace Maynuocnong.Controllers.Display.Section.Product
 
 
 
-            ViewBag.hotline = db.tblConfigs.First().HotlineIN;
+            ViewBag.hotline = db.tblConfigs.First().Hotline1;
             var listImages = db.tblImages.Where(p => p.Active == true && p.idCate == 11).OrderByDescending(p => p.Ord).ToList();
             StringBuilder chuoiimage = new StringBuilder();
             for (int i = 0; i < listImages.Count; i++)
@@ -900,6 +900,58 @@ namespace Maynuocnong.Controllers.Display.Section.Product
           
             return View();
         }
+        public ActionResult detail(string tag)
+        {
+            var config = db.tblConfigs.FirstOrDefault();
 
+            ViewBag.Title = "<title> " + config.TitleSale + "</title>";
+            ViewBag.Description = "<meta name=\"description\" content=\"" + config.TitleSale + "\"/>";
+            ViewBag.Keyword = "<meta name=\"keywords\" content=\"" + config.TitleSale + "\" /> ";
+
+            var listProductSalePriority = db.tblProducts.Where(p => p.Active == true && p.Priority == true && p.ProductSale == true).OrderBy(p => p.Ord).ToList();
+            StringBuilder resultPriority = new StringBuilder();
+            foreach (var item in listProductSalePriority)
+            {
+                resultPriority.Append("<div class=\"item\">");
+                resultPriority.Append("<div class=\"contentItem\">");
+                resultPriority.Append("<div class=\"img\">");
+                resultPriority.Append("<a href=\"/" + item.Tag + "-pd\" title=\"" + item.Name + "\"><img src=\"" + item.ImageLinkThumb + "\" title=\"" + item.Name + "\" /></a>");
+                resultPriority.Append("</div>");
+                resultPriority.Append("<a href=\"/" + item.Tag + "-pd\" title=\"" + item.Name + "\" class=\"name\">" + item.Name + "</a>");
+                resultPriority.Append("<div class=\"buy\">");
+                resultPriority.Append("<span class=\"note\">Giá chỉ từ</span>");
+                resultPriority.Append("<span class=\"price\">" + string.Format("{0:#,#}", item.PriceSale) + "<samp>đ</samp></span>");
+                resultPriority.Append("<a href=\"/" + item.Tag + "-pd\" title=\"" + item.Name + "\">Xem ngay  &raquo;</a>");
+                resultPriority.Append("</div>");
+                resultPriority.Append("</div>");
+                resultPriority.Append("</div>");
+            }
+            ViewBag.resultPriority = resultPriority.ToString();
+
+
+
+
+            var listProductSale = db.tblProducts.Where(p => p.Active == true && p.ProductSale == true).OrderBy(p => p.idCate).ToList();
+            StringBuilder resultSale = new StringBuilder();
+            foreach (var item in listProductSale)
+            {
+                resultSale.Append("<div class=\"item\">");
+                resultSale.Append("<div class=\"contentItem\">");
+                resultSale.Append("<div class=\"img\">");
+                resultSale.Append("<a href=\"/" + item.Tag + "-pd\" title=\"" + item.Name + "\"><img src=\"" + item.ImageLinkThumb + "\" title=\"" + item.Name + "\" /></a>");
+                resultSale.Append("</div>");
+                resultSale.Append("<a href=\"/" + item.Tag + "-pd\" title=\"" + item.Name + "\" class=\"name\">" + item.Name + "</a>");
+                resultSale.Append("<div class=\"buy\">");
+                resultSale.Append("<span class=\"note\">Giá chỉ từ</span>");
+                resultSale.Append("<span class=\"price\">" + string.Format("{0:#,#}", item.PriceSale) + "<samp>đ</samp></span>");
+                resultSale.Append("<a href=\"/" + item.Tag + "-pd\" title=\"" + item.Name + "\">Xem ngay  &raquo;</a>");
+                resultSale.Append("</div>");
+                resultSale.Append("</div>");
+
+                resultSale.Append("</div>");
+            }
+            ViewBag.resultSale = resultSale.ToString();
+            return View(config);
+        }
     }
 }

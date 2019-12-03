@@ -13,13 +13,19 @@
         </div>
         <div id="ListAgency">
             <div class="Agency_Tear">
-                <span class="ts">Trụ sở miền bắc</span>
-                <span class="dc">Địa chỉ: @Model.Address</span>
-                <span class="dt">Điện thoại : @Model.MobileIN   </span>
-                <span class="dt">Hotline: <span>@Model.HotlineIN - @Model.HotlineOUT</span></span>
+                <span class="ts">Showroom 391 Nguyễn Xiển</span>
+                <span class="dc">Địa chỉ: @Model.Address1</span>
+                <span class="dt">Điện thoại : @Model.Mobile1   </span>
+                <span class="dt">Hotline: <span>@Model.Hotline1 - @Model.PbxSell</span></span>
             </div>
-             @Html.Raw(ViewBag.result)
-            
+            <div class="Agency_Tear">
+                <span class="ts">Showroom 170 Phạm Văn Đồng</span>
+                <span class="dc">Địa chỉ: @Model.Address2</span>
+                <span class="dt">Điện thoại : @Model.Mobile2   </span>
+                <span class="dt">Hotline: <span>@Model.Hotline2 - @Model.PbxSell</span></span>
+            </div>
+            @Html.Raw(ViewBag.result)
+
         </div>
         <div class="Clear"></div>
     </div>
@@ -83,7 +89,7 @@
 <div id="Support_Footer">
     <div id="Content_SupportFooter">
         <div id="Support">
-            <span class="thacmac">Bạn thắc mắc trong quá trình mua hàng?</span>    <div class="Tear_Sp"><div class="Left_Tear_Sp"> </div><div class="Right_Tear_Sp"><span class="sp1"> Hỗ trợ 01   </span> <span class="sp2">  @Model.HotlineIN     </span></div> </div><div class="Tear_Sp"><div class="Left_Tear_Sp"> </div><div class="Right_Tear_Sp"><span class="sp1"> Hỗ trợ 02   </span> <span class="sp2">  @Model.HotlineOUT      </span></div> </div>
+            <span class="thacmac">Bạn thắc mắc trong quá trình mua hàng?</span>    <div class="Tear_Sp"><div class="Left_Tear_Sp"> </div><div class="Right_Tear_Sp"><span class="sp1"> Hỗ trợ 01   </span> <span class="sp2">  @Model.Hotline1     </span></div> </div><div class="Tear_Sp"><div class="Left_Tear_Sp"> </div><div class="Right_Tear_Sp"><span class="sp1"> Hỗ trợ 02   </span> <span class="sp2">  @Model.Hotline2      </span></div> </div>
         </div>
         <div id="Call" data-toggle="modal" data-target="#myModal">
             <span>YÊU CẦU CHÚNG TÔI</span>
@@ -130,7 +136,7 @@
                         <div class="content_error alert-danger"><div class="loading"></div></div>
                         <div class="submit-content error_send" style="display:none;text-align: center;">
                         </div>
-                        <div class="submit-content js_submit"><span class="send-go btn" onclick="javascript:return Senmail()">Gửi Đi</span><div class="go-hotline"> Gọi hotline <span>@Model.HotlineIN</span> (24/7)</div></div>
+                        <div class="submit-content js_submit"><span class="send-go btn" onclick="javascript:return Senmail()">Gửi Đi</span><div class="go-hotline"> Gọi hotline <span>@Model.Hotline1</span> (24/7)</div></div>
                     </div>
                 </div>
                 <div class="modal-footer">

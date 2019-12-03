@@ -1350,12 +1350,22 @@
     <Content Include="Content\Display\Icon\tap-doan-son-ha-ws.png" />
     <Content Include="Content\Display\Icon\thai-duong-nang-titan-316-moi.jpg" />
     <Content Include="Content\Display\Icon\thai-duong-nang-titan-316.png" />
+    <Content Include="Content\Display\Icon\update\bon-cau-inax-icon.png" />
+    <Content Include="Content\Display\Icon\update\calling.gif" />
+    <Content Include="Content\Display\Icon\update\facebook-icon.jpg" />
+    <Content Include="Content\Display\Icon\update\hinhtron.png" />
+    <Content Include="Content\Display\Icon\update\icon-zalo.png" />
+    <Content Include="Content\Display\Icon\update\KM-con.gif" />
+    <Content Include="Content\Display\Icon\update\youtube.png" />
     <Content Include="Content\Display\Index.html" />
     <Content Include="Content\Display\ListNews.html" />
     <Content Include="Content\Display\newsDetail.html" />
     <Content Include="Content\Display\productDetail.html" />
     <Content Include="Content\Display\ProductList.html" />
     <Content Include="Content\Display\Scipts\jquery-2.1.4.min.js" />
+    <Content Include="Content\Display\Scipts\update\jquery.popupMiendatweb.min.js" />
+    <Content Include="Content\Display\Scipts\update\owl.carousel.min.js" />
+    <Content Include="Content\Display\Scipts\update\script.js" />
     <Content Include="Content\Display\Style\baogia.css" />
     <Content Include="Content\Display\Style\Baogia_Rs.css" />
     <Content Include="Content\Display\Style\contact.css" />
@@ -1370,6 +1380,13 @@
     <Content Include="Content\Display\Style\Popup.css" />
     <Content Include="Content\Display\Style\product.css" />
     <Content Include="Content\Display\Style\product_Rs.css" />
+    <Content Include="Content\Display\Style\update\call.css" />
+    <Content Include="Content\Display\Style\update\owl.carousel.min.css" />
+    <Content Include="Content\Display\Style\update\owl.theme.default.min.css" />
+    <Content Include="Content\Display\Style\update\Popup_ud.css" />
+    <Content Include="Content\Display\Style\update\product.css" />
+    <Content Include="Content\Display\Style\update\sale.css" />
+    <Content Include="Content\Display\Style\update\times.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -2541,6 +2558,8 @@
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Baogia\BaogiaDetail.cshtml" />
     <Content Include="Views\News\TagNews.cshtml" />
+    <Content Include="Views\Footer\callPartial.cshtml" />
+    <Content Include="Views\product\detail.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

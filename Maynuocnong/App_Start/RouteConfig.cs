@@ -24,6 +24,7 @@ namespace Maynuocnong
             routes.MapRoute("Chi-tiet-sp-2", "vn/{tag3}/{tag2}/{tag1}/{tag}_{id}.html", new { controller = "product", action = "productDetail", tag = UrlParameter.Optional }, new { controller = "^P.*", action = "^productDetail$" });
             routes.MapRoute("Danh-sach-sab-pham-1", "vn/{tag1}/{tag}", new { controller = "product", action = "ListProduct", tag = UrlParameter.Optional }, new { controller = "^P.*", action = "^ListProduct$" });
             routes.MapRoute("Baogia", "Bao-gia/{Tag}/{*catchall}", new { controller = "Baogia", action = "BaogiaDetail", tag = UrlParameter.Optional }, new { controller = "^B.*", action = "^BaogiaDetail$" });
+            routes.MapRoute(name: "ban-tin-khuyen-mai", url: "ban-tin-khuyen-mai", defaults: new { controller = "product", action = "detail" });
 
             routes.MapRoute("Danh-sach-sab-pham", "vn/{tag2}/{tag1}/{tag}", new { controller = "product", action = "ListProduct", tag = UrlParameter.Optional }, new { controller = "^P.*", action = "^ListProduct$" });
             routes.MapRoute("TagNew", "TagNews/{tag}", new { controller = "News", action = "TagNews", tag = UrlParameter.Optional }, new { controller = "^N.*", action = "^TagNews$" });
