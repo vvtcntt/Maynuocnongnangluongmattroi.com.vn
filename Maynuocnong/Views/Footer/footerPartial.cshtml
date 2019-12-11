@@ -1,91 +1,98 @@
 ﻿@model Maynuocnong.Models.tblConfig
-<div id="Footer">
-    <div id="Info_Footer">
-        <div id="Logo">
-            <img src="@Model.Logo" alt="logo" />
-            <div class="timeWorks" >
-                <span class="tm1">Thời gian làm việc : <strong>8H00 - 19H30</strong> </span>
-                <span class="tm2">Làm việc tất cả các ngày trong tuần</span>
-                <span class="tm3">
-                    Khách hàng mua hàng ngoài <strong>19H30</strong> cần đặt lịch trước qua số hotline : <strong>1900 63 66 95</strong>
-                </span>
+    <div id="Footer">
+        <div id="Info_Footer">
+            <div id="Logo">
+                <img src="@Model.Logo" alt="logo" />
+                <div class="timeWorks">
+                    <span class="tm1">Thời gian làm việc : <strong>8H00 - 19H30</strong> </span>
+                    <span class="tm2">Làm việc tất cả các ngày trong tuần</span>
+                    <span class="tm3">
+                        Khách hàng mua hàng ngoài <strong>19H30</strong> cần đặt lịch trước qua số hotline : <strong>1900 63 66 95</strong>
+                    </span>
+                </div>
+            </div>
+            <div id="ListAgency">
+                <div class="Agency_Tear">
+                    <span class="ts">Showroom 391 Nguyễn Xiển</span>
+                    <span class="dc">Địa chỉ: @Model.Address1</span>
+                    <span class="dt">Điện thoại : @Model.Mobile1   </span>
+                    <span class="dt">Hotline: <span>@Model.Hotline1 - @Model.PbxSell</span></span>
+                </div>
+                <div class="Agency_Tear">
+                    <span class="ts">Showroom 170 Phạm Văn Đồng</span>
+                    <span class="dc">Địa chỉ: @Model.Address2</span>
+                    <span class="dt">Điện thoại : @Model.Mobile2   </span>
+                    <span class="dt">Hotline: <span>@Model.Hotline2 - @Model.PbxSell</span></span>
+                </div>
+                @Html.Raw(ViewBag.result)
+
+            </div>
+            <div class="Clear"></div>
+        </div>
+        <div id="Register">
+            <div id="Content_Register">
+                <div id="Left_Content_Register">
+                    <span>Đăng ký nhận bản tin</span>
+                </div>
+                <div id="Center_Content_Register">
+                    <div id="Box_Register">
+                        <input type="email" name="txtRes" id="txtRes" class="txtRes" /><button type="submit" class="btnRes" name="btnRes" id="btnRes"></button>
+                    </div>
+
+                </div>
+                <div id="Right_Content_Register">
+                    <a href="" title="" class="Google"></a>
+                    <a href="" title="" class="Face"></a>
+                    <a href="" title="" class="Maps"></a>
+                </div>
+                <div class="Clear"></div>
             </div>
         </div>
-        <div id="ListAgency">
-            <div class="Agency_Tear">
-                <span class="ts">Showroom 391 Nguyễn Xiển</span>
-                <span class="dc">Địa chỉ: @Model.Address1</span>
-                <span class="dt">Điện thoại : @Model.Mobile1   </span>
-                <span class="dt">Hotline: <span>@Model.Hotline1 - @Model.PbxSell</span></span>
-            </div>
-            <div class="Agency_Tear">
-                <span class="ts">Showroom 170 Phạm Văn Đồng</span>
-                <span class="dc">Địa chỉ: @Model.Address2</span>
-                <span class="dt">Điện thoại : @Model.Mobile2   </span>
-                <span class="dt">Hotline: <span>@Model.Hotline2 - @Model.PbxSell</span></span>
-            </div>
-            @Html.Raw(ViewBag.result)
+        <div id="Intro">
+            <div id="IntroContent">
+                <div class="Tear_Intro">
+                    <span>Thông tin công ty</span>
+                    <a href="/Gioi-thieu" title="Giới thiệu" rel="nofollow">Giới thiệu</a>
+                    <a href="/Lien-he" title="Liên hệ" rel="nofollow">Liên hệ</a>
+                    <a href="/0/Tin-tuc" title="Tin tức" rel="nofollow">Tin tức</a>
+                    <a href="/He-thong-phan-phoi" title="Hệ thống phân phối" rel="nofollow">Hệ thống phân phối</a>
+                    <a href="/Ban-do" title="Bản đồ">Bản đồ</a>
 
+                </div>
+                <div class="Tear_Intro">
+                    <span>Chinh sách dịch vụ</span>
+                    @Html.Raw(ViewBag.chinhsach)
+                </div>
+                <div class="Tear_Intro">
+                    <span>Sản phẩm tiêu biểu</span>
+                    @Html.Raw(ViewBag.chuoi)
+                </div>
+                <div class="Tear_Intro">
+                    <span>Báo giá sản phẩm</span>
+                    @Html.Raw(ViewBag.chuoibaogia)
+                </div>
+                <div class="Clear"></div>
+            </div>
         </div>
         <div class="Clear"></div>
-    </div>
-    <div id="Register">
-        <div id="Content_Register">
-            <div id="Left_Content_Register">
-                <span>Đăng ký nhận bản tin</span>
-            </div>
-            <div id="Center_Content_Register">
-                <div id="Box_Register">
-                    <input type="email" name="txtRes" id="txtRes" class="txtRes" /><button type="submit" class="btnRes" name="btnRes" id="btnRes"></button>
-                </div>
+        <div id="channel">
+            <span>Đăng ký và theo dõi sản phẩm trên</span>
 
-            </div>
-            <div id="Right_Content_Register">
-                <a href="" title="" class="Google"></a>
-                <a href="" title="" class="Face"></a>
-                <a href="" title="" class="Maps"></a>
-            </div>
-            <div class="Clear"></div>
+            <ul><li><a href="@Model.FanpageYoutube" title="youtube"><img src="~/Content/Display/iCon/update/youtube.png" title="youtube" /></a></li><li><a href="@Model.FanpageYoutube" title="facebook"><img src="~/Content/Display/iCon/update/facebook-icon.jpg" title="facebook" /></a></li></ul>
+        </div>
+        <div class="Clear"></div>
+        <div id="Bocongthuong">
+            <a href="#" title="Logo bộ công thương">
+                <img src="~/Content/Admin/Icon/logo_cap_phep.png" />
+            </a>
+        </div>
+        <div id="Linkout" style="opacity:0.2">
+            @Html.Raw(ViewBag.Url)
+        </div>
+        <div id="CoppyRight">
+            <span> 2016 <span>SEABIG VIỆT NAM</span>. All Rights Reserved.</span>
         </div>
     </div>
-    <div id="Intro">
-        <div id="IntroContent">
-            <div class="Tear_Intro">
-                <span>Thông tin công ty</span>
-                <a href="/Gioi-thieu" title="Giới thiệu" rel="nofollow">Giới thiệu</a>
-                <a href="/Lien-he" title="Liên hệ" rel="nofollow">Liên hệ</a>
-                <a href="/0/Tin-tuc" title="Tin tức" rel="nofollow">Tin tức</a>
-                <a href="/He-thong-phan-phoi" title="Hệ thống phân phối" rel="nofollow">Hệ thống phân phối</a>
-                <a href="/Ban-do" title="Bản đồ">Bản đồ</a>
-
-            </div>
-            <div class="Tear_Intro">
-                <span>Chinh sách dịch vụ</span>
-                @Html.Raw(ViewBag.chinhsach)
-            </div>
-            <div class="Tear_Intro">
-                <span>Sản phẩm tiêu biểu</span>
-                @Html.Raw(ViewBag.chuoi)
-            </div>
-            <div class="Tear_Intro">
-                <span>Báo giá sản phẩm</span>
-                @Html.Raw(ViewBag.chuoibaogia)
-            </div>
-            <div class="Clear"></div>
-        </div>
-    </div>
-
-    <div id="Bocongthuong">
-        <a href="#" title="Logo bộ công thương"> 
-            <img src="~/Content/Admin/Icon/logo_cap_phep.png" /></a>
-    </div>
-    <div id="Linkout" style="opacity:0.2">
-        @Html.Raw(ViewBag.Url)
-         </div>
-    <div id="CoppyRight">
-        <span> 2016 <span>SEABIG VIỆT NAM</span>. All Rights Reserved.</span>
-    </div>
-</div>
 <div id="Support_Footer">
     <div id="Content_SupportFooter">
         <div id="Support">

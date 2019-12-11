@@ -54,6 +54,6 @@ namespace Maynuocnong.Models
 
         public DateTime StartDateSale { get; set; }
         public DateTime EndDateSale { get; set; }
-    }
+     
 }
 }
